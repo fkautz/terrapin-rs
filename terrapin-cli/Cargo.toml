@@ -8,3 +8,4 @@ homepage.workspace = true
 [dependencies]
 structopt = "0.3"
 terrapin = { path = "../terrapin" }
+tokio = { version = "1.38.0", features = ["rt", "rt-multi-thread", "macros"] }

@@ -6,4 +6,7 @@ license.workspace = true
 homepage.workspace = true
 
 [dependencies]
-gitoid = {git = "https://github.com/fkautz/gitbom-rs", branch = "boring", features = ["boring"]}
+futures = { version = "0.3.30", features = ["std"] }
+gitoid = {git = "https://github.com/fkautz/gitbom-rs", branch = "boring", features = ["boringssl"]}
+tokio = { version = "1.38.0", features = ["rt", "rt-multi-thread", "full"] }
+hex = "0.4.3"
