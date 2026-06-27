@@ -1,3 +1,5 @@
+pub mod v3;
+
 use std::error::Error;
 use std::io;
 use std::io::{BufReader, Read};
