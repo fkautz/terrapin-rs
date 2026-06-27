@@ -1,0 +1,30 @@
+{
+  "tag": {
+    "keyword": "Verifies:",
+    "commentMarkers": ["//", "///", "/*", "*/", "*"],
+    "collectors": [
+      {
+        "lang": "comment",
+        "fileSuffix": ".rs",
+        "testMarkers": ["#[test]", "#[tokio::test]", "#[tokio::test("],
+        "namePattern": "fn\\s+([A-Za-z0-9_]+)"
+      }
+    ]
+  },
+  "coverage": {
+    "default": "unit",
+    "rules": [
+      {
+        "class": "blackbox",
+        "pathPrefixes": ["terrapin-cli/tests/"]
+      }
+    ]
+  },
+  "matrix": {
+    "primaryLabel": "Unit coverage",
+    "secondaryClass": "blackbox",
+    "secondaryLabel": "CLI (black-box) coverage",
+    "generatedBy": "`trace-check`"
+  },
+  "skipDirs": [".git", "testdata", "docs", "target"]
+}
