@@ -13,9 +13,9 @@ Coverage by class:
 Coverage by test class:
 
 - both (unit + black-box): 0 — (none)
-- unit only: 134 — REQ-G-001, REQ-G-002, REQ-G-003, REQ-G-004, REQ-G-005, REQ-G-006, REQ-HEX-001, REQ-HEX-002, REQ-HEX-003, REQ-HEX-004, REQ-MAN-001, REQ-MAN-002, REQ-MAN-003, REQ-MAN-004, REQ-MAN-005, REQ-MAN-006, REQ-MAN-007, REQ-MAN-008, REQ-MAN-009, REQ-TR-001, REQ-TR-002, REQ-TR-003, REQ-TR-004, REQ-TR-005, REQ-TR-006, REQ-TR-007, REQ-ID-001, REQ-ID-002, REQ-ID-003, REQ-ID-004, REQ-ID-005, REQ-ID-006, REQ-ID-007, REQ-ID-008, REQ-DC-001, REQ-DC-002, REQ-DC-003, REQ-DC-004, REQ-DC-005, REQ-DC-006, REQ-OFF-001, REQ-TB-001, REQ-TB-002, REQ-TB-003, REQ-TB-004, REQ-TB-005, REQ-TB-006, REQ-TB-007, REQ-TB-008, REQ-TB-009, REQ-TB-010, REQ-TB-011, REQ-BR-001, REQ-BR-002, REQ-BR-003, REQ-BR-004, REQ-BR-005, REQ-BR-006, REQ-BR-007, REQ-SB-001, REQ-SB-002, REQ-SB-003, REQ-SB-004, REQ-SB-005, REQ-SB-006, REQ-SB-007, REQ-SB-008, REQ-SB-009, REQ-SB-010, REQ-SB-011, REQ-PT-001, REQ-PT-002, REQ-PT-003, REQ-PT-004, REQ-PT-005, REQ-PT-006, REQ-PT-007, REQ-PT-008, REQ-PT-009, REQ-PT-010, REQ-PT-011, REQ-VAL-001, REQ-VAL-002, REQ-VAL-003, REQ-VAL-004, REQ-VAL-005, REQ-VAL-006, REQ-VAL-007, REQ-VAL-008, REQ-VAL-009, REQ-VAL-010, REQ-VAL-011, REQ-VAL-012, REQ-VF-001, REQ-VF-002, REQ-VF-003, REQ-VF-004, REQ-VF-005, REQ-VF-006, REQ-VF-007, REQ-VF-008, REQ-VF-009, REQ-VF-010, REQ-VF-011, REQ-VF-012, REQ-VF-013, REQ-VF-014, REQ-VF-015, REQ-CAT-001, REQ-CAT-002, REQ-CAT-003, REQ-CAT-004, REQ-CAT-005, REQ-CAT-006, REQ-CAT-007, REQ-PR-001, REQ-PR-002, REQ-PR-003, REQ-PR-004, REQ-PR-005, REQ-PR-006, REQ-CF-001, REQ-CF-002, REQ-CF-004, REQ-SEC-001, REQ-SEC-002, REQ-SEC-003, REQ-SEC-004, REQ-SEC-005, REQ-SEC-007, REQ-WE-002, REQ-WE-003, REQ-RT-001, REQ-RT-003
+- unit only: 137 — REQ-G-001, REQ-G-002, REQ-G-003, REQ-G-004, REQ-G-005, REQ-G-006, REQ-HEX-001, REQ-HEX-002, REQ-HEX-003, REQ-HEX-004, REQ-MAN-001, REQ-MAN-002, REQ-MAN-003, REQ-MAN-004, REQ-MAN-005, REQ-MAN-006, REQ-MAN-007, REQ-MAN-008, REQ-MAN-009, REQ-TR-001, REQ-TR-002, REQ-TR-003, REQ-TR-004, REQ-TR-005, REQ-TR-006, REQ-TR-007, REQ-ID-001, REQ-ID-002, REQ-ID-003, REQ-ID-004, REQ-ID-005, REQ-ID-006, REQ-ID-007, REQ-ID-008, REQ-DC-001, REQ-DC-002, REQ-DC-003, REQ-DC-004, REQ-DC-005, REQ-DC-006, REQ-OFF-001, REQ-TB-001, REQ-TB-002, REQ-TB-003, REQ-TB-004, REQ-TB-005, REQ-TB-006, REQ-TB-007, REQ-TB-008, REQ-TB-009, REQ-TB-010, REQ-TB-011, REQ-BR-001, REQ-BR-002, REQ-BR-003, REQ-BR-004, REQ-BR-005, REQ-BR-006, REQ-BR-007, REQ-SB-001, REQ-SB-002, REQ-SB-003, REQ-SB-004, REQ-SB-005, REQ-SB-006, REQ-SB-007, REQ-SB-008, REQ-SB-009, REQ-SB-010, REQ-SB-011, REQ-SB-012, REQ-PT-001, REQ-PT-002, REQ-PT-003, REQ-PT-004, REQ-PT-005, REQ-PT-006, REQ-PT-007, REQ-PT-008, REQ-PT-009, REQ-PT-010, REQ-PT-011, REQ-VAL-001, REQ-VAL-002, REQ-VAL-003, REQ-VAL-004, REQ-VAL-005, REQ-VAL-006, REQ-VAL-007, REQ-VAL-008, REQ-VAL-009, REQ-VAL-010, REQ-VAL-011, REQ-VAL-012, REQ-VF-001, REQ-VF-002, REQ-VF-003, REQ-VF-004, REQ-VF-005, REQ-VF-006, REQ-VF-007, REQ-VF-008, REQ-VF-009, REQ-VF-010, REQ-VF-011, REQ-VF-012, REQ-VF-013, REQ-VF-014, REQ-VF-015, REQ-CAT-001, REQ-CAT-002, REQ-CAT-003, REQ-CAT-004, REQ-CAT-005, REQ-CAT-006, REQ-CAT-007, REQ-PR-001, REQ-PR-002, REQ-PR-003, REQ-PR-004, REQ-PR-005, REQ-PR-006, REQ-CF-001, REQ-CF-002, REQ-CF-004, REQ-SEC-001, REQ-SEC-002, REQ-SEC-003, REQ-SEC-004, REQ-SEC-005, REQ-SEC-007, REQ-WE-002, REQ-WE-003, REQ-WE-004, REQ-RT-001, REQ-RT-003, REQ-PERF-001
 - black-box only: 15 — REQ-CLI-001, REQ-CLI-002, REQ-CLI-003, REQ-CLI-004, REQ-CLI-005, REQ-CLI-006, REQ-CLI-007, REQ-CLI-008, REQ-CLI-009, REQ-CLI-010, REQ-CLI-011, REQ-CLI-012, REQ-CLI-013, REQ-CLI-014, REQ-CLI-015
-- waived: 7 — REQ-SB-012, REQ-CF-003, REQ-SEC-006, REQ-WE-004, REQ-RT-004, REQ-PERF-001, REQ-PERF-002
+- waived: 4 — REQ-CF-003, REQ-SEC-006, REQ-RT-004, REQ-PERF-002
 - uncovered: 0 — (none)
 
 | Requirement | Section | Keyword | Unit coverage | CLI (black-box) coverage |
@@ -90,7 +90,7 @@ Coverage by test class:
 | REQ-SB-009 | §2.1 | MUST | `works_on_single_threaded_runtime` (terrapin/tests/stream_it.rs) | — |
 | REQ-SB-010 | §2.1 | SHOULD | `large_64mib_matches_in_memory` (terrapin/tests/stream_it.rs) | — |
 | REQ-SB-011 | §4.3 | SHOULD | `zeroreader_two_layer_matches_oracle` (terrapin/tests/stream_it.rs) | — |
-| REQ-SB-012 | §2.1 | SHOULD | waiver: not-implemented | — |
+| REQ-SB-012 | §2.1 | SHOULD | `streaming_holds_no_dataset_memory` (terrapin/tests/memory_it.rs) | — |
 | REQ-PT-001 | §6 | MUST | `blocks_file_size_and_content` (terrapin/tests/persist_it.rs) | — |
 | REQ-PT-002 | §6 | MUST | `head_exact_text_format` (terrapin/tests/persist_it.rs) | — |
 | REQ-PT-003 | §6 | MUST | `artifact_is_byte_reproducible` (terrapin/tests/persist_it.rs) | — |
@@ -170,9 +170,9 @@ Coverage by test class:
 | REQ-SEC-007 | §7 | MUST | `non_canonical_manifest_rejected_at_validation_boundary` (terrapin/tests/catsec_it.rs) | — |
 | REQ-WE-002 | §5.4 | MUST | `we_single_block_example_tree_is_g_of_dataset` (terrapin/tests/catsec_it.rs) | — |
 | REQ-WE-003 | §6 | MUST | `we_path_index_arithmetic` (terrapin/tests/catsec_it.rs) | — |
-| REQ-WE-004 | §6 | SHOULD | waiver: not-implemented | — |
+| REQ-WE-004 | §6 | SHOULD | `validate_reads_one_hash_file_block_per_layer` (terrapin/tests/transfer_it.rs) | — |
 | REQ-RT-001 | §2.1 | MUST | `correct_under_multi_thread_runtime` (terrapin/tests/stream_it.rs) | — |
 | REQ-RT-003 | §6 | SHOULD | `concurrent_builds_agree` (terrapin/tests/stream_it.rs) | — |
 | REQ-RT-004 | §2.1 | SHOULD | waiver: covered-by | — |
-| REQ-PERF-001 | §10 | MAY | waiver: deployment-guidance | — |
+| REQ-PERF-001 | §10 | MAY | `bench_smoke_streaming_completes` (terrapin/tests/memory_it.rs) | — |
 | REQ-PERF-002 | §10 | MAY | waiver: deployment-guidance | — |
