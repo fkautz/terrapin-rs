@@ -53,6 +53,12 @@ fn offsets_from_counts(counts: &[u64]) -> Vec<u64> {
     offs
 }
 
+/// Start hash-index of the FANOUT-sized group containing hash index `idx`.
+/// Shared by `validate`'s climb and `path_blocks` so the two never drift.
+fn group_start(idx: u64) -> u64 {
+    (idx / FANOUT as u64) * FANOUT as u64
+}
+
 /// A read handle for a persisted tree.
 pub struct PersistedTree {
     pub length: u64,
@@ -179,6 +185,48 @@ impl PersistedTree {
         Ok(())
     }
 
+    /// The hash-file blocks `validate` reads to authenticate the byte range
+    /// `[start, end)` — one per layer along each touched leaf's path (spec
+    /// section 6 path note). Returns `(layer, group_start_index, group_len_hashes)`
+    /// entries, deduplicated. This is structural (no data, no `.blocks` I/O), and
+    /// uses the same `group_start` arithmetic as `validate`'s climb, so it is an
+    /// exact account of `validate`'s `.blocks` access pattern. A single-leaf tree
+    /// and empty/empty-range inputs read no hash-file blocks.
+    pub fn path_blocks(
+        &self,
+        start: Option<u64>,
+        end: Option<u64>,
+    ) -> Result<Vec<(usize, u64, usize)>, String> {
+        let start = start.unwrap_or(0);
+        let end = end.unwrap_or(self.length);
+        if start > end || end > self.length {
+            return Err(format!(
+                "range {}..{} out of bounds for length {}",
+                start, end, self.length
+            ));
+        }
+        if self.length == 0 || end == start || self.counts[0] == 1 {
+            return Ok(Vec::new());
+        }
+        let nlayers = self.counts.len();
+        let b_lo = start / BLOCK as u64;
+        let b_hi = (end - 1) / BLOCK as u64;
+        let mut blocks: Vec<(usize, u64, usize)> = Vec::new();
+        for i in b_lo..=b_hi {
+            let mut idx = i;
+            for (l, count) in self.counts.iter().enumerate().take(nlayers) {
+                let gstart = group_start(idx);
+                let len = (count - gstart).min(FANOUT as u64) as usize;
+                let entry = (l, gstart, len);
+                if !blocks.contains(&entry) {
+                    blocks.push(entry);
+                }
+                idx /= FANOUT as u64;
+            }
+        }
+        Ok(blocks)
+    }
+
     fn root(&self) -> Result<[u8; 32], String> {
         let raw = hex_to_32(&self.tree_hex).ok_or("head: tree not 64 hex")?;
         Ok(raw)
@@ -289,7 +337,7 @@ impl PersistedTree {
             } else {
                 let mut idx = i;
                 for (l, slot) in cache.iter_mut().enumerate().take(nlayers) {
-                    let gstart = (idx / FANOUT as u64) * FANOUT as u64;
+                    let gstart = group_start(idx);
                     let posn = (idx - gstart) as usize;
 
                     let need_reload = match slot {
